@@ -11,7 +11,7 @@ ____
 
 ## Description of `WebspaceSchema`
 
-A **WebspaceSchema** has a very close syntax to `JSON` with the following *four* differences:
+A **WebspaceSchema** has a very close syntax to `JSON` with the following **four** differences:
 
  1. `keys` and `values` are surrounded by `«` and `»` (instead of `"` and `"`)
  2. `keys` and `values` use a full-width `＇` instead of a `'`
