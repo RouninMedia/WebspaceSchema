@@ -17,3 +17,48 @@ A **WebspaceSchema** has a very close syntax to `JSON` with the following **four
  2. `keys` and `values` use a full-width `＇` instead of a `'`
  3. `keys` and `values` use a full-width `＂` instead of a `\"`
  4. `keys` and `values` use a full-width `｀` instead of a \`
+
+_____
+
+## convertWebspaceSchematoJSON()
+
+```
+function convertWebspaceSchematoJSON ($webspaceSchema) {
+  
+  $webspaceSchema = str_replace('＂', '\"', $webspaceSchema);
+  $webspaceSchema = str_replace("＇", "'", $webspaceSchema);
+  $webspaceSchema = str_replace("｀", "`", $webspaceSchema);
+  $webspaceSchema = str_replace(['«', '»'], '"', $webspaceSchema);
+
+  $webspaceJSON = $webspaceSchema;
+
+  echo $webspaceJSON;
+
+  return $webspaceJSON;
+}
+```
+_____
+
+## convertJSONtoWebspaceSchema()
+
+```
+function convertJSONtoWebspaceSchema ($webspaceJSON) {
+  
+  $webspaceJSON = str_replace('\"', '＂', $webspaceJSON);
+  $webspaceJSON = str_replace("'", "＇", $webspaceJSON);
+  $webspaceJSON = str_replace("`", "｀", $webspaceJSON);
+
+  $webspaceArray = explode('"', $webspaceJSON);
+  
+  for ($i = 1; $i < count($webspaceArray); $i = $i + 2) {
+
+    $webspaceArray[$i] = '«'.$webspaceArray[$i].'»';
+  }
+
+  $webspaceJSON = implode('', $webspaceArray);
+
+  $webspaceSchema = $webspaceJSON;
+
+  return $webspaceSchema;
+}
+```
