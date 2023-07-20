@@ -1,5 +1,3 @@
-<?
-
 function convertWebspaceSchematoJSON ($webspaceSchema) {
   
   $webspaceSchema = str_replace('＂', '\"', $webspaceSchema);
@@ -13,5 +11,3 @@ function convertWebspaceSchematoJSON ($webspaceSchema) {
 
   return $webspaceJSON;
 }
-
-?>
