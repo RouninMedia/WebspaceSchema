@@ -20,7 +20,7 @@ A **WebspaceSchema** has a very close syntax to `JSON` with the following **four
 
 _____
 
-## PHP Function `convertWebspaceSchematoJSON()`
+## PHP Function: `convertWebspaceSchematoJSON()`
 
 ```
 function convertWebspaceSchematoJSON ($webspaceSchema) {
@@ -39,7 +39,7 @@ function convertWebspaceSchematoJSON ($webspaceSchema) {
 ```
 _____
 
-## PHP Function `convertJSONtoWebspaceSchema()`
+## PHP Function: `convertJSONtoWebspaceSchema()`
 
 ```
 function convertJSONtoWebspaceSchema ($webspaceJSON) {
