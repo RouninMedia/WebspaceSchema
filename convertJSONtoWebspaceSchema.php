@@ -5,6 +5,8 @@ function convertJSONtoWebspaceSchema ($webspaceJSON) {
   $webspaceJSON = str_replace('\"', '＂', $webspaceJSON);
   $webspaceJSON = str_replace("'", "＇", $webspaceJSON);
   $webspaceJSON = str_replace("`", "｀", $webspaceJSON);
+  $webspaceJSON = str_replace("<", "‹", $webspaceJSON);
+  $webspaceJSON = str_replace(">", "›", $webspaceJSON);
 
   $webspaceArray = explode('"', $webspaceJSON);
   
