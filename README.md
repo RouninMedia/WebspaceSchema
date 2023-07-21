@@ -1,5 +1,5 @@
 # WebspaceSchema
-A JSON-like data format used to express entire webspaces: folders, files, filedata
+A JSON-like data format used to describe entire webspaces: folders, files, filedata
 
 _______
 
