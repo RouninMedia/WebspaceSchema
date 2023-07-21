@@ -17,7 +17,7 @@ A **WebspaceSchema** has a very close syntax to `JSON` with the following **five
  2. `keys` and `values` use a full-width `＇` instead of a `'`
  3. `keys` and `values` use a full-width `＂` instead of a `\"`
  4. `keys` and `values` use a full-width `｀` instead of a \`
- 5. `values` use `‹﹖` and `﹖›`   instead of a `<?` and `?>`
+ 5. `values` use `‹` and `›`   instead of a `<` and `>`
 
 _____
 
