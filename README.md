@@ -23,31 +23,34 @@ _____
 
 ## PHP Function: `convertWebspaceSchematoJSON()`
 
-```
+```php
 function convertWebspaceSchematoJSON ($webspaceSchema) {
   
   $webspaceSchema = str_replace('＂', '\"', $webspaceSchema);
   $webspaceSchema = str_replace("＇", "'", $webspaceSchema);
   $webspaceSchema = str_replace("｀", "`", $webspaceSchema);
+  $webspaceSchema = str_replace("‹", "<", $webspaceSchema);
+  $webspaceSchema = str_replace("›", ">", $webspaceSchema);
   $webspaceSchema = str_replace(['«', '»'], '"', $webspaceSchema);
 
   $webspaceJSON = $webspaceSchema;
 
-  echo $webspaceJSON;
-
   return $webspaceJSON;
 }
+
 ```
 _____
 
 ## PHP Function: `convertJSONtoWebspaceSchema()`
 
-```
+```php
 function convertJSONtoWebspaceSchema ($webspaceJSON) {
   
   $webspaceJSON = str_replace('\"', '＂', $webspaceJSON);
   $webspaceJSON = str_replace("'", "＇", $webspaceJSON);
   $webspaceJSON = str_replace("`", "｀", $webspaceJSON);
+  $webspaceJSON = str_replace("<", "‹", $webspaceJSON);
+  $webspaceJSON = str_replace(">", "›", $webspaceJSON);
 
   $webspaceArray = explode('"', $webspaceJSON);
   
